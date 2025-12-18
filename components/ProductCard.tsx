@@ -3,18 +3,20 @@ import { Product } from "./NewArrivals";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="flex-1">
+    <div className="col-span-2">
       <div className="border-2 border-gray-200 p-6">
-        <p className="text-sm">{product.category}</p>
+        <p className="text-sm text-nowrap">{product.category}</p>
         <p className="text-[#034E53] line-clamp-1 mt-1 mb-6">{product.title}</p>
+
         <Image
+          className="aspect-square w-full object-contain"
           src={product.image}
-          height={0}
-          width={200}
-          alt={product.image}
-          style={{ aspectRatio: 1, objectFit: "contain", height: "auto" }}
+          alt={product.title}
+          height={200}
+          width={150}
         />
-        <div className="flex items-center gap-2 mb-2.5 mt-4">
+
+        <div className="flex items-center text-nowrap gap-2 mb-2.5 mt-4">
           <p className="text-sm line-through">RS {product.price - 2} </p>
           <p className=" text-[#0AAEB9]">RS {product.price} </p>
         </div>

@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-export const centuryGothic = localFont({
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-roboto",
+});
+
+const centuryGothic = localFont({
   src: [
     {
       path: "../public/fonts/centurygothic.ttf",
@@ -24,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${centuryGothic.className} antialiased`}>
+      <body
+        className={`${centuryGothic.className} ${roboto.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

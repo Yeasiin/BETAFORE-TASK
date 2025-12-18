@@ -1,20 +1,51 @@
 import { getProductsByCategory } from "@/actions/products";
-import Image from "next/image";
 import { Product } from "./NewArrivals";
 import ProductCard from "./ProductCard";
+import { getCategories } from "@/actions/categories";
+import Link from "next/link";
 
-export default async function ProductByCategory() {
-  const products = await getProductsByCategory("electronics");
+type ProductByCategoryProps = {
+  category: string | undefined;
+};
 
-  console.log(products, "-products");
+export default async function ProductByCategory({
+  category,
+}: ProductByCategoryProps) {
+  const categories = await getCategories();
+  const products = await getProductsByCategory(category ?? "electronics");
 
   return (
     <div className="container mx-auto py-16">
-      <h2 className="text-2xl ml-4 mb-5">
-        <span className="text-[#00CAD7]">Best</span> Deals
-      </h2>
+      <div className="flex justify-between items-center ml-4 mb-5">
+        <h2 className="text-2xl">
+          <span className="text-[#00CAD7]">Best</span> Deals
+        </h2>
+        <div className="flex gap-6">
+          {categories.data.map((cat: { id: number; name: string }) => {
+            const isActive = category === cat.name;
+            return (
+              <Link
+                href={`?category=${encodeURIComponent(cat.name)}`}
+                scroll={false}
+                key={cat.id}
+                className={`uppercase font-roboto py-2 pr-3 relative overflow-hidden bg-white group transition-all ${
+                  isActive ? "text-[#00CAD7]" : "hover:text-[#00CAD7]"
+                }`}
+              >
+                <div
+                  className={`absolute bottom-0 left-0 h-0.5 w-full rounded-xl transition-all ${
+                    isActive ? "bg-[#0AAEB9]" : "group-hover:bg-[#0AAEB9]"
+                  }`}
+                />
 
-      <div className="flex gap-8">
+                {cat.name}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className=".flex grid grid-cols-12 gap-8">
         {products.data.map((product: Product) => (
           <ProductCard product={product} key={product.id} />
         ))}

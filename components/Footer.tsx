@@ -122,7 +122,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex justify-end gap-4">
+          <div className="flex justify-end gap-4 mt-5">
             <Image
               src={"/visa-card.png"}
               height={120}
@@ -161,8 +161,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-
-      <div className="py-56"></div>
     </>
   );
 }
