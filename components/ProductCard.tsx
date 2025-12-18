@@ -18,8 +18,8 @@ export default function ProductCard({ product }: { product: Product }) {
           <p className="text-sm line-through">RS {product.price - 2} </p>
           <p className=" text-[#0AAEB9]">RS {product.price} </p>
         </div>
-        <button className="text-white bg-[#15ADB7] w-full px-2 py-2">
-          Add to Product
+        <button className="text-white bg-[#15ADB7] w-full px-2 py-2 text-nowrap">
+          Add to Cart
         </button>
       </div>
     </div>

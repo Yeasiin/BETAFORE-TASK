@@ -9,7 +9,7 @@ export default async function ProductByCategory() {
   console.log(products, "-products");
 
   return (
-    <div className="container mx-auto pt-16">
+    <div className="container mx-auto py-16">
       <h2 className="text-2xl ml-4 mb-5">
         <span className="text-[#00CAD7]">Best</span> Deals
       </h2>

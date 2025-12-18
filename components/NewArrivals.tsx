@@ -16,7 +16,7 @@ export type Product = {
 };
 
 export default async function NewArrivals() {
-  const products = await getProducts("limit=5");
+  const products = await getProducts("limit=6");
 
   return (
     <div className="container mx-auto pt-10 pb-6">

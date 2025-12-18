@@ -1,4 +1,5 @@
 import Categories from "@/components/Categories";
+import Footer from "@/components/Footer";
 import HeaderMenu from "@/components/HeaderMenu";
 import HeaderTop from "@/components/HeaderTop";
 import NewArrivals from "@/components/NewArrivals";
@@ -9,12 +10,10 @@ export default function Home() {
     <div>
       <HeaderTop />
       <HeaderMenu />
-      {/*  */}
       <Categories />
-      {/*  */}
       <NewArrivals />
-      {/*  */}
       <ProductByCategory />
+      <Footer />
     </div>
   );
 }
