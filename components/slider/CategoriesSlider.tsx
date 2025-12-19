@@ -5,10 +5,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Category } from "@/lib/types";
 import Image from "next/image";
 import Link from "next/link";
 
-type CategoriesSliderProps = { categories: { id: number; name: string }[] };
+type CategoriesSliderProps = { categories: Category[] };
 
 export default function CategoriesSlider({
   categories,

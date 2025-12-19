@@ -1,5 +1,5 @@
+import { Product } from "@/lib/types";
 import Image from "next/image";
-import { Product } from "./NewArrivals";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (

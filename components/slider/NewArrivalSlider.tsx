@@ -4,7 +4,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import ProductCard from "../ProductCard";
-import { Product } from "../NewArrivals";
+import { Product } from "@/lib/types";
 
 type NewArrivalSliderProps = { products: Product[] };
 

@@ -5,11 +5,11 @@ export async function getProducts(param?: string) {
         const url = `https://mm-assesment-server.vercel.app/api/v1/products${param ? "?" + param : ""}`
         const res = await fetch(url);
         if (!res.ok) {
-            throw new Error("Failed to fetch categories");
+            throw new Error("Failed to fetch products");
         }
         return await res.json();
     } catch (error) {
-        console.error("Error fetching categories:", error);
+        console.error("Error fetching products:", error);
         throw error;
     }
 }

@@ -1,8 +1,8 @@
 import { getProductsByCategory } from "@/actions/products";
-import { Product } from "./NewArrivals";
 import ProductCard from "./ProductCard";
 import { getCategories } from "@/actions/categories";
 import Link from "next/link";
+import { Category, Product } from "@/lib/types";
 
 type ProductByCategoryProps = {
   category: string | undefined;
@@ -22,7 +22,7 @@ export default async function ProductByCategory({
         </h2>
         <div className="overflow-x-auto scrollbar-hide -mx-4 px-4">
           <div className="flex gap-4 lg:gap-6 min-w-max pb-2">
-            {categories.data.map((cat: { id: number; name: string }) => {
+            {categories.data.map((cat: Category) => {
               const isActive = category === cat.name;
               return (
                 <Link

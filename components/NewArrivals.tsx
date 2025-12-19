@@ -1,19 +1,6 @@
 import { getProducts } from "@/actions/products";
 import NewArrivalSlider from "./slider/NewArrivalSlider";
 
-export type Product = {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
-};
-
 export default async function NewArrivals() {
   const products = await getProducts("limit=10");
 
