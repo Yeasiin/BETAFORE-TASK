@@ -1,6 +1,5 @@
 import { getProducts } from "@/actions/products";
-import Image from "next/image";
-import ProductCard from "./ProductCard";
+import NewArrivalSlider from "./slider/NewArrivalSlider";
 
 export type Product = {
   id: number;
@@ -16,7 +15,7 @@ export type Product = {
 };
 
 export default async function NewArrivals() {
-  const products = await getProducts("limit=6");
+  const products = await getProducts("limit=10");
 
   return (
     <div className="container mx-auto pt-10 pb-6">
@@ -24,11 +23,7 @@ export default async function NewArrivals() {
         <span className="text-[#00CAD7]">New</span> Arrivals
       </h2>
 
-      <div className="flex gap-8">
-        {products.data.map((product: Product) => (
-          <ProductCard product={product} key={product.id} />
-        ))}
-      </div>
+      <NewArrivalSlider products={products.data} />
     </div>
   );
 }

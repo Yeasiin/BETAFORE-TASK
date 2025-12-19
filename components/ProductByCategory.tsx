@@ -9,10 +9,10 @@ type ProductByCategoryProps = {
 };
 
 export default async function ProductByCategory({
-  category,
+  category = "electronics",
 }: ProductByCategoryProps) {
   const categories = await getCategories();
-  const products = await getProductsByCategory(category ?? "electronics");
+  const products = await getProductsByCategory(category);
 
   return (
     <div className="container mx-auto py-16">
@@ -23,6 +23,7 @@ export default async function ProductByCategory({
         <div className="flex gap-6">
           {categories.data.map((cat: { id: number; name: string }) => {
             const isActive = category === cat.name;
+            console.log(isActive, "---", category);
             return (
               <Link
                 href={`?category=${encodeURIComponent(cat.name)}`}
@@ -45,9 +46,11 @@ export default async function ProductByCategory({
         </div>
       </div>
 
-      <div className=".flex grid grid-cols-12 gap-8">
+      <div className="grid grid-cols-12 gap-8">
         {products.data.map((product: Product) => (
-          <ProductCard product={product} key={product.id} />
+          <div className="col-span-2" key={product.id}>
+            <ProductCard product={product} />
+          </div>
         ))}
       </div>
     </div>

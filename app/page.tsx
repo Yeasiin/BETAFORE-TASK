@@ -2,6 +2,7 @@ import Categories from "@/components/Categories";
 import Footer from "@/components/Footer";
 import HeaderMenu from "@/components/HeaderMenu";
 import HeaderTop from "@/components/HeaderTop";
+import HeroSlider from "@/components/slider/HeroSlider";
 import NewArrivals from "@/components/NewArrivals";
 import ProductByCategory from "@/components/ProductByCategory";
 
@@ -16,6 +17,7 @@ export default async function Home({
     <div>
       <HeaderTop />
       <HeaderMenu />
+      <HeroSlider />
       <Categories />
       <NewArrivals />
       <ProductByCategory category={params.category} />
