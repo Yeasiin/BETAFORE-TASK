@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${centuryGothic.className} ${roboto.variable} antialiased`}
+        className={`${centuryGothic.className} ${roboto.variable} antialiased overflow-x-hidden`}
       >
         {children}
       </body>

@@ -84,8 +84,6 @@ function Carousel({
   const scrollTo = React.useCallback(
     (index: number) => {
       if (index === api?.selectedScrollSnap()) return;
-      const autoplay = api?.plugins()?.autoplay;
-      autoplay?.reset();
       api?.scrollTo(index);
     },
     [api]

@@ -2,10 +2,10 @@
 
 export async function getProducts(param?: string) {
     try {
-        const url = `https://mm-assesment-server.vercel.app/api/v1/products${param ? "?" + param : ""}`
+        const url = `${process.env.API_BASE_URL}/products${param ? "?" + param : ""}`
         const res = await fetch(url);
         if (!res.ok) {
-            throw new Error("Failed to fetch products");
+            return { success: false, message: "Failed to fetch products" };
         }
         return await res.json();
     } catch (error) {
@@ -15,10 +15,10 @@ export async function getProducts(param?: string) {
 }
 export async function getProductsByCategory(category?: string) {
     try {
-        const url = `https://mm-assesment-server.vercel.app/api/v1/products/category/${category}`
+        const url = `${process.env.API_BASE_URL}/products/category/${category}`
         const res = await fetch(url);
         if (!res.ok) {
-            throw new Error("Failed to fetch products by category");
+            return { success: false, message: "Failed to fetch products by category" };
         }
         return await res.json();
     } catch (error) {

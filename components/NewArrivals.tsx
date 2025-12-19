@@ -9,8 +9,11 @@ export default async function NewArrivals() {
       <h2 className="text-2xl ml-4 mb-5">
         <span className="text-[#00CAD7]">New</span> Arrivals
       </h2>
-
-      <NewArrivalSlider products={products.data} />
+      {products.success ? (
+        <NewArrivalSlider products={products.data} />
+      ) : (
+        <div>{products.message}</div>
+      )}
     </div>
   );
 }
