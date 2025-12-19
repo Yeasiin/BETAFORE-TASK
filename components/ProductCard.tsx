@@ -3,7 +3,7 @@ import { Product } from "./NewArrivals";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="border-2 border-gray-200 p-6 mx-0.5">
+    <div className="border-2 border-gray-200 p-6 ml-1 md:ml-0.5">
       <p className="text-sm text-nowrap">{product.category}</p>
       <p className="text-[#034E53] line-clamp-1 mt-1 mb-6">{product.title}</p>
 

@@ -9,7 +9,7 @@ import CartIcon from "./icons/CartIcon";
 export default function HeaderTop() {
   return (
     <div className="bg-[#03484D] py-2">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2">
         <div className="flex justify-between gap-12">
           <div className="flex items-center gap-10 flex-1 ">
             <Image
@@ -20,7 +20,7 @@ export default function HeaderTop() {
               loading="eager"
               alt="Win Store"
             />
-            <div className="flex text-sm items-center bg-white rounded overflow-hidden w-full">
+            <div className="flex text-sm items-center bg-white rounded overflow-hidden w-full max-lg:hidden">
               <select className="py-1.5 pl-3 mr-3  outline-0 text-gray-400 ">
                 <option value="">All Categories</option>
                 <option value="electronic">Electronic</option>
@@ -39,8 +39,8 @@ export default function HeaderTop() {
               </button>
             </div>
           </div>
-          <div className="flex items-center justify-end gap-6 mr-6 xl:flex-1">
-            <div className="text-white">
+          <div className="flex items-center justify-end gap-6 sm:mr-6 xl:flex-1">
+            <div className="text-white max-lg:hidden">
               <p className="text-xs ">Call Us Now</p>
               <div className="flex">
                 <HeadsetIcon />{" "}
@@ -65,6 +65,27 @@ export default function HeaderTop() {
               </span>
               <p>Cart</p>
             </Link>
+          </div>
+        </div>
+
+        <div className="lg:hidden px-4 mx-auto max-w-lg my-2">
+          <div className="flex text-sm items-center bg-white rounded overflow-hidden  ">
+            <select className="py-1.5 pl-3 mr-3  outline-0 text-gray-400 ">
+              <option value="">All Categories</option>
+              <option value="electronic">Electronic</option>
+              <option value="cosmetic">Cosmetic</option>
+              <option value="clothing">Clothing</option>
+            </select>
+            <input
+              className="py-1.5 placeholder:text-gray-400 outline-0 border-l-2 border-gray-300 pr-2 pl-4 w-full"
+              type="text"
+              placeholder="Search for products"
+              name=""
+              id=""
+            />
+            <button className="bg-[#B6B6B6] py-1.5 px-2">
+              <SearchIcon size={20} />
+            </button>
           </div>
         </div>
       </div>

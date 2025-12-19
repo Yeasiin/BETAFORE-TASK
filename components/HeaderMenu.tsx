@@ -8,7 +8,7 @@ import InstagramIcon from "./icons/InstagramIcon";
 export default function HeaderMenu() {
   return (
     <div className="bg-[#0E3B3E] py-2.5 ">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex items-center">
             <div className="flex text-white items-center gap-2 mr-6">
@@ -16,14 +16,14 @@ export default function HeaderMenu() {
               <p>Browse By Category</p>
             </div>
             <div className=""></div>
-            <div className="text-white flex text-sm gap-6">
+            <div className="text-white  flex text-sm gap-6 max-lg:hidden">
               <Link href="/">Home</Link>
               <Link href="/">Easy Monthly Installments</Link>
               <Link href="/">Shop by Brands</Link>
               <Link href="/">Become a Vendor</Link>
             </div>
           </div>
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-1 sm:gap-5 items-center">
             <Link href={"https://facebook.com"} target="_blank">
               <FacebookIcon />
             </Link>

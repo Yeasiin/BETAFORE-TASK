@@ -10,8 +10,8 @@ export default function Footer() {
     <>
       <div className="bg-[#393939] py-16">
         <div className="container mx-auto px-6 lg:px-16  ">
-          <div className="flex justify-between text-white gap-y-12 ">
-            <div className="max-lg:basis-2/4 .lg:basis-1/4  ">
+          <div className="flex lg:justify-between max-lg:flex-wrap text-white gap-y-12 ">
+            <div className="max-lg:basis-2/4 ">
               <Image
                 src="/logo.svg"
                 height={0}
@@ -49,7 +49,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="max-lg:basis-2/4 .lg:basis-1/4  ">
+            <div className="max-lg:basis-2/4 ">
               <h3 className="text-[#00CAD7] text-xl">Trending</h3>
               <ul className="text-sm mt-5 space-y-1.5">
                 <li>
@@ -73,7 +73,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="max-lg:basis-2/4 .lg:basis-1/4  ">
+            <div className="max-lg:basis-2/4 ">
               <h3 className="text-[#00CAD7] text-xl">Information</h3>
               <ul className="text-sm mt-5 space-y-1.5">
                 <li>
@@ -97,7 +97,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="max-lg:basis-2/4 .lg:basis-1/4  ">
+            <div className="max-lg:basis-2/4 ">
               <h3 className="text-[#00CAD7] text-xl">Customer Care</h3>
               <ul className="text-sm mt-5 space-y-1.5">
                 <li>

@@ -1,7 +1,6 @@
 import {
   Carousel,
   CarouselContent,
-  CarouselDots,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
@@ -15,7 +14,7 @@ export default function CategoriesSlider({
   categories,
 }: CategoriesSliderProps) {
   return (
-    <div>
+    <div className="">
       <Carousel
         opts={{
           align: "start",
@@ -28,7 +27,7 @@ export default function CategoriesSlider({
             categories.map((category) => (
               <CarouselItem
                 key={category.id}
-                className="basis-1/3 lg:basis-1/4 "
+                className="basis-1/2 md:basis-1/3 lg:basis-1/4 "
               >
                 <div className="flex-1 relative ml-2.5" key={category.id}>
                   <div className="absolute bottom-4 -left-3 bg-white font-medium text-lg xl:text-xl py-1 xl:py-1.5 px-2 xl:px-5 [box-shadow:0px_1px_7px_0px_#00000091] flex w-full justify-between">
@@ -54,7 +53,6 @@ export default function CategoriesSlider({
               </CarouselItem>
             ))
           )}
-          {}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
