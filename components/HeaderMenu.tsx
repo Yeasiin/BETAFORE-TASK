@@ -1,9 +1,9 @@
 import Link from "next/link";
-import HamburgerIcon from "./icons/HamburgerIcon";
 import FacebookIcon from "./icons/FacebookIcon";
 import TwitterIcon from "./icons/TwitterIcon";
 import LinkedinIcon from "./icons/LinkedinIcon";
 import InstagramIcon from "./icons/InstagramIcon";
+import BrowseByCategoryButton from "./BrowseByCategoryButton";
 
 export default function HeaderMenu() {
   return (
@@ -11,10 +11,11 @@ export default function HeaderMenu() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex items-center">
-            <div className="flex text-white items-center gap-2 mr-6">
+            {/* <div className="flex text-white items-center gap-2 mr-6">
               <HamburgerIcon />
-              <p>Browse By Category</p>
-            </div>
+              <p className="max-sm:text-sm">Browse By Category</p>
+            </div> */}
+            <BrowseByCategoryButton />
             <div className=""></div>
             <div className="text-white  flex text-sm gap-6 max-lg:hidden">
               <Link href="/">Home</Link>
@@ -23,7 +24,7 @@ export default function HeaderMenu() {
               <Link href="/">Become a Vendor</Link>
             </div>
           </div>
-          <div className="flex gap-1 sm:gap-5 items-center">
+          <div className="flex gap-2 sm:gap-5 items-center">
             <Link href={"https://facebook.com"} target="_blank">
               <FacebookIcon />
             </Link>

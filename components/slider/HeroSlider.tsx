@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function HeroSlider() {
   return (
-    <div>
+    <div className="max-sm:py-3  bg-[#F4F0CE]">
       <Carousel
         opts={{
           align: "start",
@@ -25,7 +25,7 @@ export default function HeroSlider() {
                   alt="Carousel Image"
                   width={1200}
                   height={600}
-                  className="w-full h-auto object-contain"
+                  className="sm:w-full h-auto object-cover sm:object-contain"
                   priority
                 />
               </div>

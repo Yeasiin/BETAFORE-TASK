@@ -22,7 +22,7 @@ export default function NewArrivalSlider({ products }: NewArrivalSliderProps) {
           {products.map((product) => (
             <CarouselItem
               key={product.id}
-              className="basis-1/2 [@media(min-width:551px)]:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 pl-3 md:pl-4 lg:pl-8 "
+              className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 pl-3 md:pl-4 lg:pl-8 "
             >
               <ProductCard product={product} />
             </CarouselItem>

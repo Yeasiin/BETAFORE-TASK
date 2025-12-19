@@ -148,7 +148,7 @@ export default function Footer() {
       </div>
       <div className="bg-[#161616] py-3.5">
         <div className="container mx-auto px-4 lg:px-12">
-          <p className="text-white">
+          <p className="text-white max-sm:text-sm">
             &copy; 2025 Winstore. All Rights Reserved.
           </p>
         </div>

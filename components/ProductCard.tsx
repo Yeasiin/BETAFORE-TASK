@@ -3,7 +3,7 @@ import { Product } from "./NewArrivals";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="border-2 border-gray-200 p-6 ml-1 md:ml-0.5">
+    <div className="border-2 border-gray-200 p-4 sm:p-6 ml-1 md:ml-0.5">
       <p className="text-sm text-nowrap">{product.category}</p>
       <p className="text-[#034E53] line-clamp-1 mt-1 mb-6">{product.title}</p>
 
@@ -22,7 +22,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </p>
         <p className="max-lg:text-sm text-[#0AAEB9]">RS {product.price} </p>
       </div>
-      <button className="text-white bg-[#15ADB7] w-full px-2 py-2 text-nowrap cursor-pointer">
+      <button className="text-white bg-[#15ADB7] w-full px-2 py-2 text-center cursor-pointer">
         Add to Cart
       </button>
     </div>
