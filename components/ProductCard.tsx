@@ -16,9 +16,11 @@ export default function ProductCard({ product }: { product: Product }) {
         />
       </div>
 
-      <div className="flex items-center text-nowrap gap-2 mb-2.5 mt-4">
-        <p className="text-sm line-through">RS {product.price - 2} </p>
-        <p className=" text-[#0AAEB9]">RS {product.price} </p>
+      <div className="flex items-center max-xl:flex-wrap text-nowrap gap-x-2  mb-2.5 mt-4">
+        <p className="text-xs lg:text-sm line-through">
+          RS {product.price - 2}{" "}
+        </p>
+        <p className="max-lg:text-sm text-[#0AAEB9]">RS {product.price} </p>
       </div>
       <button className="text-white bg-[#15ADB7] w-full px-2 py-2 text-nowrap cursor-pointer">
         Add to Cart

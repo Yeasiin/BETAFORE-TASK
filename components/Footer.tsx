@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <>
       <div className="bg-[#393939] py-16">
-        <div className="container mx-auto px-16  ">
-          <div className="flex justify-between text-white ">
-            <div className="">
+        <div className="container mx-auto px-6 lg:px-16  ">
+          <div className="flex justify-between text-white gap-y-12 ">
+            <div className="max-lg:basis-2/4 .lg:basis-1/4  ">
               <Image
                 src="/logo.svg"
                 height={0}
@@ -49,7 +49,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="">
+            <div className="max-lg:basis-2/4 .lg:basis-1/4  ">
               <h3 className="text-[#00CAD7] text-xl">Trending</h3>
               <ul className="text-sm mt-5 space-y-1.5">
                 <li>
@@ -73,7 +73,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="">
+            <div className="max-lg:basis-2/4 .lg:basis-1/4  ">
               <h3 className="text-[#00CAD7] text-xl">Information</h3>
               <ul className="text-sm mt-5 space-y-1.5">
                 <li>
@@ -97,7 +97,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="">
+            <div className="max-lg:basis-2/4 .lg:basis-1/4  ">
               <h3 className="text-[#00CAD7] text-xl">Customer Care</h3>
               <ul className="text-sm mt-5 space-y-1.5">
                 <li>
@@ -122,40 +122,32 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex justify-end gap-4 mt-5">
-            <Image
-              src={"/visa-card.png"}
-              height={120}
-              width={120}
-              unoptimized={true}
-              alt="Visa Card"
-            />
-            <Image
-              src={"/mastercard.png"}
-              height={120}
-              width={120}
-              unoptimized={true}
-              alt="Master Card"
-            />
-            <Image
-              src={"/cod.png"}
-              height={120}
-              width={120}
-              unoptimized={true}
-              alt="Cash On Delivery"
-            />
-            <Image
-              src={"/eip.png"}
-              height={120}
-              width={120}
-              unoptimized={true}
-              alt="easy installment plan"
-            />
+          <div className="flex lg:justify-end gap-4 mt-5">
+            <div className="relative w-22 lg:w-30 aspect-video flex items-center justify-center">
+              <Image
+                src={"/visa-card.png"}
+                fill
+                alt="Visa Card"
+                className="object-contain"
+              />
+            </div>
+
+            <div className="relative w-22 lg:w-30 aspect-video flex items-center justify-center">
+              <Image src={"/mastercard.png"} fill alt="Master Card" />
+            </div>
+
+            <div className="relative w-22 lg:w-30 aspect-video flex items-center justify-center">
+              <Image src={"/cod.png"} fill alt="Cash On Delivery" />
+            </div>
+
+            <div className="relative w-22 lg:w-30 aspect-video flex items-center justify-center">
+              <Image src={"/eip.png"} fill alt="easy installment plan" />
+            </div>
           </div>
         </div>
       </div>
       <div className="bg-[#161616] py-3.5">
-        <div className="container mx-auto px-12">
+        <div className="container mx-auto px-4 lg:px-12">
           <p className="text-white">
             &copy; 2025 Winstore. All Rights Reserved.
           </p>

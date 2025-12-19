@@ -46,9 +46,9 @@ export default async function ProductByCategory({
         </div>
       </div>
 
-      <div className="grid grid-cols-12 gap-8">
+      <div className="grid grid-cols-12 lg:grid-cols-10 xl:grid-cols-12 gap-8">
         {products.data.map((product: Product) => (
-          <div className="col-span-2" key={product.id}>
+          <div className="col-span-3 lg:col-span-2" key={product.id}>
             <ProductCard product={product} />
           </div>
         ))}

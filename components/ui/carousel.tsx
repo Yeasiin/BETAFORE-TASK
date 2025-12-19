@@ -258,9 +258,9 @@ function CarouselPrevious({
         <path
           d="M41.25 49.5L24.75 33L41.25 16.5"
           stroke="black"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
 
@@ -302,9 +302,9 @@ function CarouselNext({
         <path
           d="M24.75 49.5L41.25 33L24.75 16.5"
           stroke="black"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
 

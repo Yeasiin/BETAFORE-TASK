@@ -10,7 +10,7 @@ export default function HeaderTop() {
   return (
     <div className="bg-[#03484D] py-2">
       <div className="container mx-auto">
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-12">
           <div className="flex items-center gap-10 flex-1 ">
             <Image
               src="/logo.svg"
@@ -39,7 +39,7 @@ export default function HeaderTop() {
               </button>
             </div>
           </div>
-          <div className="flex items-center justify-end gap-6 mr-6 flex-1">
+          <div className="flex items-center justify-end gap-6 mr-6 xl:flex-1">
             <div className="text-white">
               <p className="text-xs ">Call Us Now</p>
               <div className="flex">
