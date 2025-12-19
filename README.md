@@ -16,5 +16,5 @@
 - Assumptions\*\*
 
   - New Arrivals: The "New Arrivals" section fetches the first 10 products from the API using the `?limit=10` parameter. I assumed this would return the most recent items.
-  - Product Pricing Display: The `ProductCard.tsx` component displays a "discounted" price. I assumed a fictional original price (API price + 2) to demonstrate styling for both a sale price and an original price.
+  - Product Pricing Display: The `ProductCard.tsx` component displays a "discounted" price. I assumed a fictional original price (API price - 2) to demonstrate styling for both a sale price and an original price.
   - Default Category: On initial page load, the "Best Deals" section defaults to displaying products from the "electronics" category if no other category is selected via the URL.
